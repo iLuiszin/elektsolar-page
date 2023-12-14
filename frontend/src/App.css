@@ -12,8 +12,13 @@ img {
 
 .App {
     min-height: 100vh;
-    width: 85vw;
-    max-width: 1900px;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0rem auto;
+}
+
+.eight-five-vw {
+    max-width: 85vw;
     margin: 0rem auto;
 }
 
@@ -31,10 +36,16 @@ nav {
     align-items: center;
     justify-content: space-between;
     min-height: 90px;
+    padding: 0rem 4rem;
 }
 
 .navbar-menu-container {
     display: none;
+}
+
+.nav-logo-container {
+    max-width: 100px;
+    margin-right: 2rem;
 }
 
 .navbar-links-container a {
@@ -45,16 +56,30 @@ nav {
     font-weight: 600;
 }
 
+.navbar-links-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-links-container a:hover {
+    text-decoration: underline;
+}
+
 .primary-button {
-    padding: 0.9rem 1.75rem;
+    padding: 0.9rem 1.5rem;
     background-color: white;
     outline: none;
     border: none;
     border-radius: 5rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     font-weight: 600;
     transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
 }
 
 .navbar-cart-icon {
@@ -74,6 +99,23 @@ nav {
     position: relative;
     display: flex;
     padding-top: 3rem;
+}
+
+.home-image-section {
+    position: relative;
+}
+
+.diagonal-decoration::before {
+    content: '';
+    position: absolute;
+    top: 90px;
+    right: 100px;
+    width: 85%;
+    height: 85%;
+    background: #fe9e0d5e;
+    clip-path: polygon(10% 0, 100% 0, 50% 100%, 0 100%);
+    transform: rotate(-20deg);
+    z-index: -1;
 }
 
 .home-bannerImage-container {
@@ -100,8 +142,11 @@ nav {
 .primary-heading {
     font-size: clamp(2rem, 5vw, 4rem);
     color: #4c4c4c;
-    /* line-height: 5rem; */
     max-width: 600px;
+}
+
+.text-align-center {
+    text-align: center;
 }
 
 .primary-text {
@@ -142,6 +187,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .about-background-image-container {
@@ -175,6 +221,7 @@ nav {
 
 .watch-video-button {
     margin-left: 2rem;
+    margin-top: 2rem;
     background-color: transparent;
     outline: none;
     border: none;
@@ -232,6 +279,17 @@ nav {
     margin-top: 10rem;
 }
 
+.footer-align-text {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.footer-align-text svg {
+    font-size: 1.5rem;
+    color: #5ae08e;
+}
+
 .footer-logo-container {
     max-width: 110px;
 }
@@ -267,6 +325,12 @@ nav {
     color: #4c4c4c;
     cursor: pointer;
 }
+
+.footer-section-columns span:hover {
+    text-decoration: underline;
+    color: #5ab5e0;
+}
+
 
 .testimonial-section-bottom {
     margin-top: 2rem;
@@ -326,7 +390,7 @@ nav {
 .work-section-info {
     width: 290px;
     min-height: 350px;
-    background-color: white;
+    background-color: #ddb881;
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
@@ -334,8 +398,13 @@ nav {
     align-items: center;
     text-align: center;
     border-radius: 1rem;
-    color: #505050;
+    color: #000;
     margin: 1rem 2rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.work-section-info img {
+    border-radius: 1rem;
 }
 
 .work-section-info h2 {
@@ -357,7 +426,80 @@ nav {
     font-weight: 600;
 }
 
+@media (max-width: 1600px) {
+    .navbar-links-container a {
+        margin-right: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .primary-button {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 1306px) {
+    .navbar-links-container a {
+        margin-right: 1rem;
+        font-size: 1rem;
+    }
+
+    .primary-button {
+        font-size: 1rem;
+    }
+
+    .nav-logo-container {
+        max-width: 100px;
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .navbar-links-container a {
+        margin-right: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .primary-button {
+        font-size: .9rem;
+        padding: 0.7rem 1.5rem;
+    }
+}
+
 @media (max-width: 1000px) {
+
+
+
+    .home-image-section,
+    .about-section-image-container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .diagonal-decoration::before {
+        max-width: 300px;
+        top: 50px;
+        right: 60px;
+    }
+
+
+
+    .home-text-section,
+    .about-section-text-container {
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+    }
+
+    .navbar-links-container {
+        display: none;
+
+    }
+
+    .navbar-menu-container {
+        display: flex;
+    }
+
     .navbar-links-container a {
         margin-right: 1rem;
         font-size: 1rem;
@@ -377,34 +519,11 @@ nav {
         max-width: 140px;
     }
 
-    .navbar-links-container {
-        display: none;
-    }
-
-    .navbar-menu-container {
-        display: flex;
-    }
-
     .home-bannerImage-container {
         max-width: 450px;
     }
 
-    .home-banner-container,
-    .about-section-container {
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-    }
 
-    .about-section-container {
-        flex-direction: column;
-    }
-
-    .home-image-section,
-    .about-section-image-container {
-        width: 100%;
-        max-width: 400px;
-    }
 
     .primary-heading {
         text-align: center;
@@ -416,12 +535,32 @@ nav {
         max-width: 80%;
     }
 
-    .home-text-section,
-    .about-section-text-container {
-        justify-content: center;
+
+    .home-banner-container,
+    .about-section-container {
+        flex-direction: column;
         align-items: center;
-        margin-top: 4rem;
+        justify-content: center;
     }
+
+
+    .about-section-container {
+        flex-direction: column-reverse;
+    }
+
+
+    .home-image-section,
+    .about-section-image-container {
+        max-width: 250px;
+    }
+
+    .diagonal-decoration::before {
+        max-width: 250px;
+        top: 50px;
+        right: 50px;
+    }
+
+
 
     .secondary-button {
         font-size: 1rem;
@@ -432,6 +571,9 @@ nav {
     .about-section-container {
         margin-top: 5rem !important;
     }
+
+
+
 
     .about-buttons-container {
         justify-content: center;

@@ -1,6 +1,6 @@
 import React from 'react'
-import AboutBackground from '../Assets/about-background.png'
-import AboutBackgroundImage from '../Assets/about-background-image.png'
+import AboutBackground from '../../Assets/about-background.png'
+import AboutBackgroundImage from '../../Assets/bannerImage.jpg'
 import { BsFillPlayCircleFill } from 'react-icons/bs'
 
 const About = () => {
@@ -14,21 +14,27 @@ const About = () => {
             </div>
             <div>
                 <div className="about-section-text-container">
-                    <p className="primary-subheadin">About</p>
+                    <p className="primary-subheading">About</p>
                     <h1 className='primary-heading'>
-                        Food Is An Important Part Of A Balanced Diet
+                        Quem somos?
                     </h1>
                     <p className='primary-text'>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, laudantium consequuntur? Laboriosam sit dolorum voluptatem sed amet laborum, fugiat distinctio eius vero reiciendis perspiciatis. Dolore earum quia deleniti commodi maiores!
+                        Desde 2013 trazendo o mais moderno conhecimento sobre energia solar fotovoltaica.
                     </p>
                     <p className='primary-text'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nisi iste officia cumque quae odio maiores ullam voluptatum modi doloremque. Exercitationem inventore commodi dicta?
+                        Profissionais com sólida formação, graduados pela Universidade Federal de Santa Catarina.
+                    </p>
+                    <p className='primary-text'>
+                        Centenas de cursos e treinamentos ministrados em todo território nacional.
+                    </p>
+                    <p className='primary-text'>
+                        Mais de 8000 alunos treinados e capacitados para atuação no mercado de energia solar.
                     </p>
                     <div className="about-buttons-container">
                         <button className="secondary-button">
-                            Learn More
+                            Ver Mais
                         </button>
-                        <button className='watch-video-button'><BsFillPlayCircleFill />Watch Video</button>
+
                     </div>
                 </div>
             </div>

@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
-import Logo from '../Assets/Logo.svg'
-import { BsCart2 } from 'react-icons/bs'
+import React, { useEffect, useState } from 'react'
+import Logo from '../../Assets/Logo.png'
 import { HiOutlineBars3 } from 'react-icons/hi2'
+import { FaArrowRight } from "react-icons/fa6";
+
 import {
     Box,
     Drawer,
@@ -18,47 +19,64 @@ import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded'
 
 
 const Navbar = () => {
-
     const [openMenu, setOpenMenu] = useState(false)
     const menuOptions = [
         {
-            text: 'Home',
+            text: '360 Solar',
             icon: <HomeIcon />,
         },
         {
-            text: 'About',
+            text: 'Cursos',
             icon: <InfoIcon />,
         },
         {
-            text: 'Testimonials',
+            text: 'Blog',
             icon: <CommentRoundedIcon />,
         },
         {
-            text: 'Contact',
-            icon: <PhoneRoundedIcon />,
-        },
-        {
-            text: 'Cart',
+            text: 'Institucional',
             icon: <ShoppingCartRoundedIcon />,
         },
+        {
+            text: 'Área do Aluno',
+            icon: <ShoppingCartRoundedIcon />,
+        },
+        {
+            text: 'Seja um Afiliado',
+            icon: <ShoppingCartRoundedIcon />,
+        },
+        {
+            text: 'Contato',
+            icon: <PhoneRoundedIcon />,
+        }
     ]
+
+
 
     return (
 
-        <nav>
+        <nav >
             <div className="nav-logo-container">
                 <img src={Logo} alt="Logo" />
             </div>
             <div className="navbar-links-container">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Testimonials</a>
-                <a href="">Contact</a>
-                <a href="">
-                    < BsCart2 className='navbar-cart-icon' />
-                </a>
-                <button className="primary-button">Bookings Now</button>
+                <a href="/">360 Solar</a>
+                <a href="/">Cursos</a>
+                <a href="/">Blog</a>
+                <a href="/">Institucional</a>
+                <a href="/">Área do Aluno</a>
+                <a href="/">Seja um Afiliado</a>
+                <a href="/">Contato</a>
+                <button className='primary-button' >
+                    Saiba Mais
+                    <FaArrowRight />
+                </button>
             </div>
+
+
+
+
+
             <div className="navbar-menu-container">
                 <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
             </div>
